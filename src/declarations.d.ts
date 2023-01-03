@@ -1,39 +1,25 @@
-declare module "*.html" {
-  const rawHtmlFile: string;
-  export = rawHtmlFile;
+// event-bus
+export class EventBus {
+  private getNextId(): number
+  public static get instance(): EventBus
+  public dispatch<T>(event: string, arg?: T): void
+  public register(event: string, callback: Function): { unregister: () => void; }
 }
 
-declare module "*.bmp" {
-  const src: string;
-  export default src;
+
+// token
+
+type ParsedToken = {
+  user: string;
+  permissions: string[];
 }
 
-declare module "*.gif" {
-  const src: string;
-  export default src;
-}
+export class TokenAdapter {
+  public static KEY_STORAGE: string;
 
-declare module "*.jpg" {
-  const src: string;
-  export default src;
-}
-
-declare module "*.jpeg" {
-  const src: string;
-  export default src;
-}
-
-declare module "*.png" {
-  const src: string;
-  export default src;
-}
-
-declare module "*.webp" {
-  const src: string;
-  export default src;
-}
-
-declare module "*.svg" {
-  const src: string;
-  export default src;
+  public get token(): string
+  public removeToken(): void
+  public set token(token: string)
+  public get tokenIsValid(): boolean;
+  public get parsedToken(): ParsedToken | undefined;
 }
