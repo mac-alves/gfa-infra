@@ -2,7 +2,7 @@ export class TokenAdapter {
 
     public static KEY_STORAGE = '@gfa-token';
 
-    private constructor() { }
+    public constructor() { }
 
     public get token(): string {
         return localStorage.getItem(TokenAdapter.KEY_STORAGE);

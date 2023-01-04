@@ -4,7 +4,7 @@ const singleSpaDefaults = require("webpack-config-single-spa-ts");
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "gfa",
-    projectName: "gfa-infra",
+    projectName: "infra",
     webpackConfigEnv,
     argv,
   });

@@ -1,6 +1,6 @@
 {
   "extends": "ts-config-single-spa",
-  "files": ["src/gfa-gfa-infra.ts"],
+  "files": ["src/gfa-infra.ts"],
   "compilerOptions": {
     "target": "ES2020",
     "declarationDir": "dist"
